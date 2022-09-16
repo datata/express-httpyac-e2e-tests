@@ -1,11 +1,14 @@
-GET http://localhost:3000/api/tests
+@host=http://localhost:3000
+
+###
+GET {{host}}/api/tests
 ###
 
-POST http://localhost:3000/api/tests
+POST {{host}}/api/tests
 ###
 
-PUT http://localhost:3000/api/tests
+PUT {{host}}/api/tests
 ###
 
-DELETE http://localhost:3000/api/tests
+DELETE {{host}}/api/tests
 ###
