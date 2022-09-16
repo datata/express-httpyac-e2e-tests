@@ -1,39 +1,12 @@
 const router = require('express').Router();
+const { getTest, createTest, updateTest, deleteTest } = require('../controllers/testController');
 
-router.get('/tests', (req, res) => {
-    return res.status(200).json(
-        {
-            success: "true",
-            message: "Getting test"
-        }
-    );
-});
+router.get('/tests', getTest);
 
-router.post('/tests', (req, res) => {
-    return res.status(201).json(
-        {
-            success: "true",
-            message: "Creating test"
-        }
-    )
-});
+router.post('/tests', createTest);
 
-router.put('/tests', (req, res) => {
-    return res.status(200).json(
-        {
-            success: "true",
-            message: "Updating test"
-        }
-    )
-});
+router.put('/tests', updateTest);
 
-router.delete('/tests', (req, res) => {
-    return res.status(200).json(
-        {
-            success: "true",
-            message: "Getting test"
-        }
-    )
-});
+router.delete('/tests', deleteTest);
 
 module.exports = router;
