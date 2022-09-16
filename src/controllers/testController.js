@@ -1,6 +1,6 @@
-const testContoller = {};
+const testController = {};
 
-testContoller.getTest = (req, res) => {
+testController.getTest = (req, res) => {
     return res.status(200).json(
         {
             success: "true",
@@ -9,7 +9,7 @@ testContoller.getTest = (req, res) => {
     );
 };
 
-testContoller.createTest = (req, res) => {
+testController.createTest = (req, res) => {
     return res.status(201).json(
         {
             success: "true",
@@ -18,7 +18,7 @@ testContoller.createTest = (req, res) => {
     );
 };
 
-testContoller.updateTest = (req, res) => {
+testController.updateTest = (req, res) => {
     return res.status(200).json(
         {
             success: "true",
@@ -27,13 +27,13 @@ testContoller.updateTest = (req, res) => {
     );
 };
 
-testContoller.deleteTest = (req, res) => {
+testController.deleteTest = (req, res) => {
     return res.status(200).json(
         {
             success: "true",
-            message: "Updating test"
+            message: "Deleting test"
         }
     );
 };
 
-module.exports = testContoller;
+module.exports = testController;
