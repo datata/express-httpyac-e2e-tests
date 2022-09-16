@@ -1,11 +1,11 @@
-GET http://localhost:3000/tests
+GET http://localhost:3000/api/tests
 ###
 
-POST http://localhost:3000/tests
+POST http://localhost:3000/api/tests
 ###
 
-PUT http://localhost:3000/tests
+PUT http://localhost:3000/api/tests
 ###
 
-DELETE http://localhost:3000/tests
+DELETE http://localhost:3000/api/tests
 ###
