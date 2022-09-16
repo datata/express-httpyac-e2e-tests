@@ -1,2 +1,11 @@
-GET https://localhost:3000/test
+GET http://localhost:3000/tests
+###
+
+POST http://localhost:3000/tests
+###
+
+PUT http://localhost:3000/tests
+###
+
+DELETE http://localhost:3000/tests
 ###
