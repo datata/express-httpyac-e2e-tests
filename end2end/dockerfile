@@ -1,0 +1,15 @@
+FROM node:18-alpine
+
+RUN npm i -g httpyac
+
+RUN apk --update --no-cache add curl
+
+WORKDIR /test
+
+ENV NODE_ENV=production
+
+ENV FORCE_COLOR=2
+
+# COPY ../ .
+
+CMD ["http","send", "**/*.http", "all", "-e", "production", "-d", "exchange"]

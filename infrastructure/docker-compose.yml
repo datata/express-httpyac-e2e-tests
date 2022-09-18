@@ -1,0 +1,35 @@
+version: '3.6'
+services:
+  express-node-app:
+    build: 
+      context: ../src
+    container_name: express-node-app
+    ports: 
+      - "3000:3000"
+    volumes:
+      - ../:/usr/var/app
+    command: npm run dev
+    networks:
+      - express-node-network
+    # healthcheck:
+    #     test: curl --fail http://express-node-app:3000/api/tests
+    #     interval: 5s
+    #     timeout: 10s
+    #     retries: 5
+
+  yac-http-test:
+    build:
+      context: ../end2end
+    container_name: yac-http-test
+    # depends_on:
+    #   express-node-app:
+    #     condition: service_healthy
+    networks:
+      - express-node-network
+    volumes:
+      - "../end2end:/test"
+    command: httpyac send **/*.http --all --env production --output-failed exchange --output none
+
+networks:
+  express-node-network:
+    name: express-node-network
